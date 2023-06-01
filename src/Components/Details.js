@@ -1,10 +1,20 @@
 import React from "react";
 import "./Style/Detail.css";
 import { useNavigate } from "react-router-dom";
+import movieImage from "./Images/MovieImage.jpg";
 
 function Details() {
   var showSel = localStorage.getItem("showSel");
   var showObj = JSON.parse(showSel);
+  if (showObj.image == null) {
+    var showObj = {
+      ...showObj,
+      image: {
+        original:
+          "https://images.unsplash.com/photo-1616530940355-351fabd9524b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fG1vdmllfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+      },
+    };
+  }
   const nav = useNavigate();
   function downScroll() {
     document.getElementById("upperDiv").style.bottom = "100vh";
@@ -109,34 +119,51 @@ function Details() {
               <i>{showObj.network.country.name}</i>
             </div>
           </div>
-          <div className="otherD">
+          <div className="inputSpace">
             <button onClick={downScroll} className="bookButtonD">
               Book Seat
             </button>
           </div>
         </div>
         <div className="lowerDiv" id="lowerDiv">
-          <form>
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="inputEmail4">Name</label>
-                <input type="text" class="form-control" placeholder="name" />
+          <form className="formCont">
+            <div>
+              <div className="inputFields">Name</div>
+              <div className="inputSpace">
+                <input type="text"></input>
               </div>
             </div>
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="inputCity">Mobile</label>
-                <input type="text" class="form-control" placeholder="mobile" />
+            <div>
+              <div className="inputFields">Seats</div>
+              <div className="inputSpace">
+                <input type="number"></input>
               </div>
-              <div class="form-group col-md-2">
-                <label for="inputZip">Seats</label>
-                <input type="number" class="form-control" />
+            </div>
+            <div>
+              <div className="inputFields">City</div>
+              <div className="inputSpace">
+                <input type="text"></input>
               </div>
+            </div>
+            <div>
+              <div className="inputFields">State</div>
+              <div className="inputSpace">
+                <input type="text"></input>
+              </div>
+            </div>
+            <div>
+              <div className="inputFields">Mobile</div>
+              <div className="inputSpace">
+                <input type="text"></input>
+              </div>
+            </div>
+            <div className="inputSpace">
+              <button className="bookButtonD">Book</button>
             </div>
           </form>
-          <div>
+          <div className="rightSide">
             <div>
-              Days:
+              <b>Days: </b>
               {showObj.schedule.days.length != 0 ? (
                 showObj.schedule.days.map((e) => {
                   return <span>{e}</span>;
@@ -146,16 +173,15 @@ function Details() {
               )}
             </div>
             <div>
-              Time:
+              <b>Time: </b>
               {showObj.schedule.time !== ""
                 ? showObj.schedule.time
                 : "Unavailable"}
             </div>
-            <button onClick={upscroll} className="bookButtonD1">
+            <button onClick={upscroll} className="bookButtonD">
               Details
             </button>
           </div>
-          <button className="bookButtonD">Book</button>
         </div>
       </div>
     </div>

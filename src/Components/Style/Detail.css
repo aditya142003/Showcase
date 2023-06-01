@@ -41,7 +41,7 @@ button {
   font-size: 20px;
   padding: 7px;
 }
-.bookButtonD{
+.bookButtonD {
   background-color: red;
   color: white;
   height: 55px;
@@ -50,9 +50,8 @@ button {
   border-radius: 40px;
   font-size: 18px;
   margin: 30px;
-  margin-left: 28vw;
 }
-.bookButtonD1{
+.bookButtonD1 {
   background-color: red;
   color: white;
   height: 55px;
@@ -60,4 +59,34 @@ button {
   border: white 1px solid;
   border-radius: 40px;
   font-size: 18px;
+}
+.inputFields {
+  text-align: center;
+  font-size: 20px;
+}
+.inputSpace {
+  text-align: center;
+}
+.inputSpace > input {
+  width: 300px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.formCont {
+  margin: auto;
+  border: 1px black solid;
+  padding: 20px;
+  margin-top: 30px;
+  margin-left: 50px;
+  border-radius: 20px;
+  height: 80vh;
+  width: 35vw;
+}
+.rightSide {
+  margin: 120px;
+  font-size: 20px;
 }
