@@ -14,14 +14,50 @@
   transition: 1s ease;
 }
 .lowerDiv {
-    height: 100vh;
-    position: relative;
-    bottom: 0vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    transition: 1s ease;
+  height: 100vh;
+  position: relative;
+  bottom: 0vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  transition: 1s ease;
 }
-button{
-    height: 50px;
-    width: 100px;
+button {
+  height: 50px;
+  width: 100px;
+}
+.titleD {
+  text-align: center;
+  font-size: 50px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 30px;
+}
+.summaryD {
+  text-align: center;
+  padding: 10px;
+  font-size: 22px;
+  margin: 30px;
+}
+.otherD {
+  font-size: 20px;
+  padding: 7px;
+}
+.bookButtonD{
+  background-color: red;
+  color: white;
+  height: 55px;
+  width: 100px;
+  border: white 1px solid;
+  border-radius: 40px;
+  font-size: 18px;
+  margin: 30px;
+  margin-left: 28vw;
+}
+.bookButtonD1{
+  background-color: red;
+  color: white;
+  height: 55px;
+  width: 100px;
+  border: white 1px solid;
+  border-radius: 40px;
+  font-size: 18px;
 }

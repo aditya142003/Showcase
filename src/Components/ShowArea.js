@@ -44,61 +44,59 @@ function ShowArea(props) {
       <div className="showMainCont">
         {shows.map((ele) => {
           return (
-            <div>
-              <div class="card mb-3" style={{ maxWidth: "540px" }}>
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img
-                      src={ele.show.image ? ele.show.image.original : logo}
-                      class="img-fluid rounded-start"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">{ele.show.name}</h5>
-                      <p class="card-text">
-                        {ele.show.summary.slice(0, 150) + "..."}
-                      </p>
-                      <p class="card-text">
-                        Genres:
-                        <small class="text-body-secondary">
-                          {ele.show.genres.map((e) => {
-                            return <span>{e}</span>;
-                          })}
-                        </small>
-                      </p>
-                      <p class="card-text">
-                        Language:
-                        <small class="text-body-secondary">
-                          {ele.show.language}
-                        </small>
-                      </p>
-                      <p class="card-text">
-                        Days:
-                        <small class="text-body-secondary">
-                          {ele.show.schedule.days.length != 0 ? (
-                            ele.show.schedule.days.map((e) => {
-                              return <span>{e}</span>;
-                            })
-                          ) : (
-                            <span>Unavailable</span>
-                          )}
-                        </small>
-                      </p>
-                      <p class="card-text">
-                        Time:
-                        <small class="text-body-secondary">
-                          {ele.show.schedule.time !== ""
-                            ? ele.show.schedule.time
-                            : "Unavailable"}
-                        </small>
-                      </p>
-                      <button onClick={(event) => handleClick(ele, event)}>
-                        Know more
-                      </button>
-                    </div>
-                  </div>
+            <div className="showIndividual">
+              <div>
+                <img
+                  src={ele.show.image ? ele.show.image.original : logo}
+                  class="showImage"
+                  alt="..."
+                />
+              </div>
+              <div>
+                <h3 className="title">{ele.show.name}</h3>
+                <div className="summary">
+                  {ele.show.summary.slice(0, 150) + "..."}
+                </div>
+                <div className="other">
+                  <b>Genres: </b>
+                  {ele.show.genres.map((e) => {
+                    return (
+                      <span>
+                        <i>{e}</i>
+                        <b> </b>
+                      </span>
+                    );
+                  })}
+                </div>
+                <div className="other">
+                  <b>Days: </b>
+                  {ele.show.schedule.days.length != 0 ? (
+                    ele.show.schedule.days.map((e) => {
+                      return (
+                        <span>
+                          <i>{e}</i>
+                        </span>
+                      );
+                    })
+                  ) : (
+                    <span>Unavailable</span>
+                  )}
+                </div>
+                <div className="other">
+                  <b>Time: </b>
+                  <i>
+                    {ele.show.schedule.time !== ""
+                      ? ele.show.schedule.time
+                      : "Unavailable"}
+                  </i>
+                </div>
+                <div className="other">
+                  <button
+                    onClick={(event) => handleClick(ele, event)}
+                    className="knowMore"
+                  >
+                    Know more
+                  </button>
                 </div>
               </div>
             </div>
