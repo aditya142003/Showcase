@@ -1,0 +1,37 @@
+.NavContainer {
+  height: 10vh;
+  width: 100vw;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.searchBar {
+  background-color: white;
+  color: black;
+  width: 10vw;
+  height: 4vh;
+  text-align: center;
+  border-radius: 10px;
+}
+.searchDiv{
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 50px;
+}
+.logo {
+  height: 9vh;
+  width: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 20px;
+}
+.logoContainer {
+  display: flex;
+  font-size: 40px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 10px;
+}

@@ -1,0 +1,17 @@
+.slider{
+    height: 300px;
+    width: auto;
+    display: flex;
+    width: 80vw;
+    overflow: hidden;
+}
+.sliderImage{
+    width: 400px;
+    height: auto;
+}
+.showMainCont{
+    width: 90vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

@@ -1,0 +1,27 @@
+.detailCont {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+.bgimage {
+  height: 100vh;
+  mask-image: linear-gradient(to right, black 80%, transparent);
+}
+.upperDiv {
+  height: 100vh;
+  position: relative;
+  bottom: 0vh;
+  transition: 1s ease;
+}
+.lowerDiv {
+    height: 100vh;
+    position: relative;
+    bottom: 0vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    transition: 1s ease;
+}
+button{
+    height: 50px;
+    width: 100px;
+}
